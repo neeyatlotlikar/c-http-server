@@ -9,10 +9,10 @@ SRCS := $(SRC_DIR)/server_select.c
 OBJS := $(BUILD_DIR)/server_select.o
 BIN  := $(BUILD_DIR)/server
 
+all: $(BUILD_DIR) $(BIN)
+
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
-
-all: $(BUILD_DIR) $(BIN)
 
 $(BUILD_DIR)/server_select.o: $(SRC_DIR)/server_select.c
 	$(CC) $(CFLAGS) -c $< -o $@
